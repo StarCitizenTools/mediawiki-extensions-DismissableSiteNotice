@@ -68,7 +68,7 @@ class DismissableSiteNoticeHooks {
 					'node.outerHTML=' . Xml::encodeJsVar( $notice ) . ';' .
 					'}' .
 					'}());'
-				);
+				, $skin->getOutput()->getCSP()->getNonce() );
 			$notice = $jsWrapped;
 		}
 	}
